@@ -172,9 +172,8 @@ function postProcessIndex(indexPath, build) {
     '<meta name="theme-color" content="#111827">'
   );
 
-  // Ensure a single loading copy + cellular hint for ~83MB assets
-  const loadingCopy = `<div class="loading-text">Loading big music project…</div>
-    <p class="hint">Large download (~80MB). On cellular this can take a minute — please wait.</p>`;
+  // Ensure a single loading copy (no size / cellular hint)
+  const loadingCopy = `<div class="loading-text">Loading Sprunki Pokémon Jam</div>`;
 
   // Packager emits <h1 class="loading-text">…</h1> when loadingScreen.text is set
   if (/<h1 class="loading-text">[\s\S]*?<\/h1>/.test(html)) {
@@ -189,9 +188,9 @@ function postProcessIndex(indexPath, build) {
     );
   }
 
-  // Remove any leftover duplicate loading-text nodes (keep first + following hint)
+  // Remove any leftover duplicate loading-text / hint nodes (keep first loading copy)
   html = html.replace(
-    /(<div class="loading-text">[\s\S]*?<\/div>\s*<p class="hint">[\s\S]*?<\/p>)([\s\S]*?)(<div class="progress-bar-outer">)/,
+    /(<div class="loading-text">[\s\S]*?<\/div>)([\s\S]*?)(<div class="progress-bar-outer">)/,
     (match, keep, middle, bar) => {
       const cleaned = middle.replace(/<(h1|div) class="loading-text">[\s\S]*?<\/\1>\s*/g, "")
         .replace(/<p class="hint">[\s\S]*?<\/p>\s*/g, "");
@@ -246,7 +245,7 @@ async function main() {
   packager.options.controls.stopAll.enabled = true;
   packager.options.controls.fullscreen.enabled = true;
   packager.options.loadingScreen.progressBar = true;
-  packager.options.loadingScreen.text = "Loading big music project…";
+  packager.options.loadingScreen.text = "Loading Sprunki Pokémon Jam";
   packager.options.appearance.background = "#111827";
 
   packager.addEventListener("zip-progress", ({ detail }) => {
