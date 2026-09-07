@@ -562,6 +562,10 @@ def reembed(icon_pngs: dict[str, bytes], chars: tuple[str, ...] | None = None) -
 
 
 def main() -> None:
+    raise SystemExit(
+        "DISABLED: heavy outline strengthen is banned. "
+        "Use scripts/redo_safe_sprites.py / safe_bg_pipeline.py (edge flood-fill only)."
+    )
     print("=== 1) Strengthen outlines (heavy_wide) on target art — skip Oren ===")
     process_art(TARGET_CHARS)
 

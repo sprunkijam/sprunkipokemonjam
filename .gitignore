@@ -11,3 +11,8 @@ desktop.ini
 *.swp
 *~
 project.sb3
+
+art/_preview/
+art/_backup/
+art/_originals/
+scripts/__pycache__/
