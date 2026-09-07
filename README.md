@@ -35,6 +35,8 @@ GitHub Actions rebuilds `dist/` on every push to `main`, so you do not need to c
 
 Static site output is written to `dist/` (open `dist/index.html` or serve that folder).
 
+Each build also writes `dist/version.json` and injects a small update checker into `index.html`. Open tabs poll for a new build every ~45s (and when the tab becomes visible again). If a newer deploy is live while you're still on the loading/launch screen, the page auto-reloads once; if you're mid-mix, a tap-to-update banner appears instead of interrupting playback.
+
 ## License / credits
 
 See [CREDITS.md](./CREDITS.md). Community remix — respect original creators and trademarks.
