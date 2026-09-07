@@ -1,0 +1,17 @@
+{
+  "name": "sprunkipokemonjam",
+  "version": "1.0.0",
+  "description": "Classic Sprunki-style music mixer packaged with TurboWarp (Pokemon sprites later)",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "echo \"no tests\" && exit 0"
+  },
+  "keywords": [],
+  "author": "sprunkijam",
+  "license": "ISC",
+  "dependencies": {
+    "@turbowarp/packager": "^3.13.0"
+  },
+  "private": true
+}
