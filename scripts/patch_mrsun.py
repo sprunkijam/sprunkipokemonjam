@@ -108,7 +108,7 @@ def main() -> None:
     bak_dir = ROOT / "art" / "_backup"
     bak_dir.mkdir(parents=True, exist_ok=True)
     p1.save(bak_dir / "mrsun-phase1.png", "PNG")
-    p1 = strengthen_outlines(p1, heavy=False)
+    p1 = strengthen_outlines(p1, mode="heavy_wide")
     ART_P1.parent.mkdir(parents=True, exist_ok=True)
     p1.save(ART_P1, "PNG")
     p1_bytes = ART_P1.read_bytes()
