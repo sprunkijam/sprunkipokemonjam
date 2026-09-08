@@ -1,0 +1,31 @@
+{
+  "name": "Sprunki Pok\u00e9mon Jam",
+  "short_name": "Sprunki Pok\u00e9mon Jam",
+  "description": "Sprunki Pok\u00e9mon Jam \u2014 a Pok\u00e9mon-inspired classic Sprunki mixer. Drag characters, stack loops, flip into Phase 2.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#B8956A",
+  "theme_color": "#B8956A",
+  "lang": "en",
+  "dir": "ltr",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./icons/pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
